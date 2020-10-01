@@ -1,30 +1,35 @@
-import * as React from 'react'
+import React, { useEffect } from 'react'
 import styled from '@emotion/styled'
 import { keyframes } from '@emotion/core'
+import * as Icons from './icons'
+export { Icons }
 
-const bounce = keyframes`
-  from, 20%, 53%, 80%, to {
-    transform: translate3d(0,0,0);
+const slowBounce = keyframes`
+  0% {
+    transform:  translate(0px,0px)  ;
   }
-
-  40%, 43% {
-    transform: translate3d(0, -30px, 0);
+  25% {
+    transform:  translate(0px,5px)  ;
   }
-
-  70% {
-    transform: translate3d(0, -15px, 0);
+  50% {
+    transform:  translate(0px,0px)  ;
   }
-
-  90% {
-    transform: translate3d(0,-4px,0);
+  75% {
+    transform:  translate(0px,-5px)  ;
+  }
+  100% {
+    transform:  translate(0px,0px)  ;
   }
 `
 
 const Text = styled.p`
     color: blue;
-    animation: ${bounce} 1s ease infinite;
+    animation: ${slowBounce} 4s cubic-bezier(.46,.15,.78,.59) infinite;
 `
 
 export const Thing = () => {
+    useEffect(() => {
+        // code to run on component mount
+    }, [])
     return <Text>Lorem ipsum</Text>
 }

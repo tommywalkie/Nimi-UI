@@ -30,12 +30,6 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# vercel
-.vercel
-
-# Ignore any Nextjs PWA generated content 
-/public/**/*
-!/public/icons
-!/public/favicon.ico
-!/public/manifest.json
-!/public/vercel.svg
+# Parcel
+.cache
+dist
