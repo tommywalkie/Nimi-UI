@@ -1,8 +1,35 @@
 import React, { useEffect } from 'react'
 import styled from '@emotion/styled'
 import { keyframes } from '@emotion/core'
-import * as Icons from './icons'
-export { Icons }
+
+export {
+    IrisLibre as IrisLibreIcon,
+    IrisLibre as FFNFIcon,
+    IronBlood as IronBloodIcon,
+    IronBlood as KMSIcon,
+    Bilibili as BilibiliIcon,
+    Collab as CollabIcon,
+    Collab as UtawarerumonoIcon,
+    Collab as KizunaAIIcon,
+    Collab as HololiveIcon,
+    DragonEmpire as DragonEmpireIcon,
+    DragonEmpire as ROCIcon,
+    EagleUnion as EagleUnionIcon,
+    EagleUnion as USSIcon,
+    Neptunia as NeptuniaIcon,
+    Neptunia as HDNIcon,
+    NorthernParliament as NorthernParliamentIcon,
+    NorthernParliament as SNIcon,
+    RoyalNavy as RoyalNavyIcon,
+    RoyalNavy as HMSIcon,
+    SakuraEmpire as SakuraEmpireIcon,
+    SakuraEmpire as IJNIcon,
+    SardegnaEmpire as SardegnaEmpireIcon,
+    SardegnaEmpire as RNIcon,
+    Universal as UniversalIcon,
+    VichyaDominion as VichyaDominionIcon,
+    VichyaDominion as MNFIcon
+} from './icons'
 
 const slowBounce = keyframes`
   0% {

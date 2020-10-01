@@ -12,11 +12,13 @@
   },
   "scripts": {
     "start": "tsdx watch",
-    "build": "tsdx build && rimraf ./dist/*.svg && cpy src/**/*.svg dist/icons",
+    "build": "tsdx build && run-s build:cleanup cpy-svg sharp-png sharp-webp",
+    "build:cleanup": "rimraf ./dist/*.svg",
+    "cpy-svg": "cpy **/*.svg ../../dist/icons --cwd=src/icons --parents",
+    "sharp-png": "sharp -i ./dist/**/*.svg -o {dir} -f png resize 80 80",
+    "sharp-webp": "sharp -i ./dist/**/*.svg -o {dir} -f webp resize 80 80",
     "test": "tsdx test --passWithNoTests",
-    "prepare": "tsdx build",
-    "size": "size-limit",
-    "analyze": "size-limit --why"
+    "prepare": "tsdx build"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -31,6 +33,7 @@
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "cpy-cli": "^3.1.1",
+    "npm-run-all": "^4.1.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "rimraf": "^3.0.2",
@@ -41,7 +44,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",
-    "animejs": "^3.2.0",
-    "emotion": "^10.0.27"
+    "emotion": "^10.0.27",
+    "sharp-cli": "^1.14.1"
   }
 }
