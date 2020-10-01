@@ -1,3 +1,9 @@
+/*
+ * Copyright 2020 Tom Bazarnik et al.
+ * Licensed under the GNU General Public License v3
+ * See LICENSE for details.
+ */
+
 import React, { useEffect } from 'react'
 import styled from '@emotion/styled'
 import { keyframes } from '@emotion/core'

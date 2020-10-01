@@ -1,3 +1,8 @@
+/*
+ * Copyright 2020 Tom Bazarnik et al.
+ * Licensed under the GNU General Public License v3
+ * See LICENSE for details.
+ */
 import { ReactComponent as IronBlood } from './nations/ironblood.svg'
 import { ReactComponent as Bilibili } from './nations/bilibili.svg'
 import { ReactComponent as Collab } from './nations/collab.svg'
